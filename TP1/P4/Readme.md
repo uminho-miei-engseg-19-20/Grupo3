@@ -106,9 +106,8 @@ Certificate:
          8d:8d:31:98:76:d3:71:99
  ```
  Os algoritmos e o tamanho das chaves foram os seguintes:
- Signature Algorithm é sha256 com encriptação RSA ,Public Key lgorithm é encriptação RSA e tamanho das chaves é 2048 bit.
+ Signature Algorithm - sha256 com encriptação RSA ,Public Key Algorithm - encriptação RSA e tamanho das chaves - 2048 bit.
   
   De acordo com o Nist o tamanho mínimo para a família SHA-256 é
   3072, o que torna este certificado inválido. Portanto, o tamanho 
-  mínimo das chaves teria de ser 3072 bit. Deste modo o certificado tem de ser corrigido, tornando-se assim acessível até alguns anos 
-  depois de 2030.
+  mínimo das chaves teria de ser 3072 bit. Deste modo o certificado tem de ser corrigido, tornando-se assim acessível até     alguns anos depois de 2030.
