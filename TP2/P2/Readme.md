@@ -24,7 +24,7 @@ Contudo, o rating não é 100% significativo no que toca à segurança em si mas
 #### Alínea III - Termo DNS CAA
 
 No campo "DNS CAA" ambas as universidades apresentam No. Este campo é para uma proposta que visa a melhorar os ecossistemas PKY no sentido em que lhe dão o controlo para restringir quais as CAs que podem emitir certificados para um determinado domínio.
-A Autorização de Autoridade de Certificação (CAA) é então uma proposta para melhorar as emissões de certificadose com isto, pretende-se que uma CA antes de emitir um certificado verifique se está no resgisto DNS de permissões, caso não esteja recusa a emissão.
+A Autorização de Autoridade de Certificação (CAA) é então uma proposta para melhorar as emissões de certificados e com isto, pretende-se que uma CA antes de emitir um certificado verifique se está no resgisto DNS de permissões, caso não esteja recusa a emissão.
 
 
 
