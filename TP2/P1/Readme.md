@@ -15,10 +15,10 @@ O módulo `init-app.py` pode ser ser executado de uma das seguintes formas:
 guardando-as num ficheiro com o nome `fileSigner`.
 
 Execução utilizando o comando `python init-app.py`
-![](P1/imagens/init-app.png)
+![](imagens/init-app.png)
 
 Execução utilizando o comando `python init-app.py -init`
-![](P1/imagens/init-app-init.png)
+![](imagens/init-app-init.png)
 
 **Ofuscação**
 
@@ -27,7 +27,7 @@ O módulo `ofusca-app.py` deve ser executado da seguinte forma:
 guarda as _blind components_ e as _pRComponents_ num ficheiro do requerente com o de `fileReq`.
 
 Execução utilizando o comando `python ofusca-app -msg <mensagem> -RDash <pRDashComponents>`.
-![](P1/imagens/ofuscar.png)
+![](imagens/ofuscar.png)
 
 **Assinatura**
 
@@ -35,7 +35,7 @@ O módulo `blindSignature-app.py` deve ser executado da seguinte forma:
 - `python blindSignature-app.py -key <chave_privada> -bmsg <blind_message>`, que devolve a _blind signature_ executada.
 
 Execução utilizando o comando `python blindSignature-app.py -key <chave_privada> -bmsg <blind_message>`.
-![](P1/imagens/sign.png)
+![](imagens/sign.png)
 
 **Desofuscação**
 
@@ -44,7 +44,7 @@ O módulo `desofusca-app.py` deve ser executado da seguinte forma:
 assinatura retirada da _blind signature_.
 
 Execução utilizando o comando `python desofusca-app.py -s <blind_signature> -RDash <pRDashComponents>`.
-![](P1/imagens/desofuscar.png)
+![](imagens/desofuscar.png)
 
 **Verificação**
 
