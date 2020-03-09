@@ -16,9 +16,9 @@ Assim, de seguida, apresentamos a informação toda disponibilizada pelo SSL lab
 
 #### Alínea II - Análise do Resultado do site com pior rating
 
-O site com pior rating corresponde ao da universidade de Yale, estado este avaliado num rating de B. Esta primeira análise baseia-se na análise de um conjunto de métricas, que tendo em conta todos estes aspetos analisados formam o rating final.
+O site com pior rating corresponde ao da universidade de Yale, estando este avaliado num rating de B. Esta primeira análise baseia-se no estudo de um conjunto de métricas, que formam o rating final.
 
-Como esta análise indica, este servidor suporta tanto TLS 1.0 e TLS 1.1 que faz com que o rating diminua para B pois afeta a componente de Protocol Suport. Este servidor está bastante exposto a ataques man-in-the-middle, por exemplo, o que leva ao compremetimento da integridade de dados do site.
+Como esta análise indica, este servidor suporta tanto TLS 1.0 e TLS 1.1 que faz com que o rating diminua para B pois afeta a componente de Protocol Suport. Este servidor está bastante exposto a ataques man-in-the-middle, por exemplo, o que leva ao comprometimento da integridade dos dados do site.
 Contudo, o rating não é 100% significativo no que toca à segurança em si mas é importante pois existem considerações e atualizações que devem ser tomadas em conta de forma a garantir uma maior segurança.
 
 #### Alínea III - Termo DNS CAA
