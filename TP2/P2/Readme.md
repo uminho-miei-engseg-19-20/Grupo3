@@ -21,7 +21,7 @@ O site com pior rating corresponde ao da universidade de Yale, estado este avali
 Como esta análise indica, este servidor suporta tanto TLS 1.0 e TLS 1.1 que faz com que o rating diminua para B pois afeta a componente de Protocol Suport. Este servidor está bastante exposto a ataques man-in-the-middle, por exemplo, o que leva ao compremetimento da integridade de dados do site.
 Contudo, o rating não é 100% significativo no que toca à segurança em si mas é importante pois existem considerações e atualizações que devem ser tomadas em conta de forma a garantir uma maior segurança.
 
-#### Alínea III - Termo BEAST attack em Protocol Details
+#### Alínea III - Termo DNS CAA
 
 
 
