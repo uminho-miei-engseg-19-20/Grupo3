@@ -10,7 +10,7 @@ Desta forma, a informação obtida em cada pesquisa foram:
 [Shodan-Harvard](https://github.com/uminho-miei-engseg-19-20/Grupo3/tree/master/TP2/P3/UniversidadeHarvard-Shodan.pdf)
 
 
-2. Universidade de Yale, em New Heaven, nos EUA
+1. Universidade de Yale, em New Heaven, nos EUA
 
 [Shodan-Yale](https://github.com/uminho-miei-engseg-19-20/Grupo3/tree/master/TP2/P3/UniversidadeYale-Shodan.pdf)
 
@@ -36,12 +36,17 @@ Após termos encontrado a informação acima, corremos o ssh-audit e o resultado
    Software e versão: OpenSSH_5.3
 
 #### Alínea 3
-Como se pode observar pela informação obtida em CVE Details:
+Como se pode observar pela informação obtida em CVE Details, com base no OpenSSH utilizado:
 1. Universidade de Harvard, em Cambridge, nos EUA
-(https://www.cvedetails.com/vulnerability-list/vendor_id-97/product_id-585/version_id-274092/)
+[CVE_Details](https://www.cvedetails.com/vulnerability-list/vendor_id-97/product_id-585/version_id-274092/)
 
 2. Universidade de Yale, em New Heaven, nos EUA
-(https://www.cvedetails.com/vulnerability-list/vendor_id-97/product_id-585/version_id-121223/Openbsd-Openssh-5.3.html)
+[CVE_Details](https://www.cvedetails.com/vulnerability-list/vendor_id-97/product_id-585/version_id-121223/Openbsd-Openssh-5.3.html)
 
 Portanto, a Universidade de Harvard apresenta 4 vulnerabilidades e a Universidade de Yale apresenta 10 vulnerabilidades.
 Conclui-se então que das versões existentes a que tem mais vulnerabilidades é a OpenSSH_5.3
+
+#### Alínea 4
+A vulnerabilidade mais grave detetada corresponde ao CVE-2014-1692, avaliada num CVSS Score de 7.5.
+
+
