@@ -1,4 +1,4 @@
-### Pergunta P3.1
+### Pergunta 3.1
 
 Começamos por escolher dois Servidores SSH das duas universidades não Europeias, nomeadamente a universidade de Harvard e a 
 universidade de Yale. Conforme enunciado, fizemos a pesquisa com a utilização do site Shodan, pesquisando por 
@@ -26,3 +26,15 @@ Após termos encontrado a informação acima, corremos o ssh-audit e o resultado
 1. Universidade de Yale, em New Heaven, nos EUA
 
 [ssh-audit-Yale](https://github.com/uminho-miei-engseg-19-20/Grupo3/tree/master/TP2/P3/ssh-audit-UniversidadeYale.txt)
+
+#### Alínea 2
+
+1. Universidade de Harvard, em Cambridge, nos EUA
+   Software e versão: OpenSSH_7.9
+   
+2. Universidade de Yale, em New Heaven, nos EUA
+   Software e versão: OpenSSH_5.3
+
+#### Alínea 3
+
+Das versões apresentadas a que tem mais vulnerabilidades é a OpenSSH_5.3
