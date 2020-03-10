@@ -49,4 +49,10 @@ Conclui-se então que das versões existentes a que tem mais vulnerabilidades é
 #### Alínea 4
 A vulnerabilidade mais grave detetada corresponde ao CVE-2014-1692, avaliada num CVSS Score de 7.5.
 
+<p align="center">
+    <img src="CVE-2014-1692.png">
+</p>
 
+#### Alínea 5
+
+Com base na análise da vulnerabilidade acima apresentada, existe alguma gravidade no sentido de um possível Denial of Service, podendo comprometer de forma parcial e causar impacto a nível da confidencialidade, integridade e disponibilidade. Desta forma, consideramos que esta vulnerabilidade pode considerar-se grave para efeitos práticos pois afeta partes importantes mesmo que parcialmente.
