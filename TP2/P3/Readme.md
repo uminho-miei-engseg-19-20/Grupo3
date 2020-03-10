@@ -10,7 +10,7 @@ Desta forma, a informação obtida em cada pesquisa foram:
 [Shodan-Harvard](https://github.com/uminho-miei-engseg-19-20/Grupo3/tree/master/TP2/P3/UniversidadeHarvard-Shodan.pdf)
 
 
-1. Universidade de Yale, em New Heaven, nos EUA
+2. Universidade de Yale, em New Heaven, nos EUA
 
 [Shodan-Yale](https://github.com/uminho-miei-engseg-19-20/Grupo3/tree/master/TP2/P3/UniversidadeYale-Shodan.pdf)
 
