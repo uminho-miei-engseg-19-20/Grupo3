@@ -55,8 +55,8 @@ de SnakeCoin irá ser extraído e o miner receberá um novo SnakeCoin.
 
 ### 2
 
-O algoritmo utilizado não é o mais adequado porque este tem reque de pouco poder computacional para a criação de um novo bloco 
-dado que apenas efetua operações simples e não se consegue controlar a dificuldade que este tem no que toca a minerar um bloco.
-
-Outro problema recai no facto de ser possível acontecer um overload do sistema pois este poderá não ter capacidade para 
-suportar vários blocos que estão a ser criados.
+O algoritmo utilizado não é o mais adequado porque não é possível definir a dificuldade do puzzle. Um fator importante e que 
+faz com que este algoritmo não seja o mais adequadp é cálculo da prova ser realizado através da prova anterior, o que permite 
+realizar facilmente o cálculo das provas dos blocos antes que estes sejam publicados. Por fim, consideramos que existe 
+dificuldade em encontrar um número divisível por 9 e pelo número do último PoW, levando assim a que seja necessário um elevado 
+poder computacional para publicar blocos quando a Blockchain já é grande.
