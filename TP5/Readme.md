@@ -9,7 +9,7 @@ As estratégias de design para a privacidade podem ser divididas em 2 vertentes:
 * *Orientadas aos dados*: Pode apoiar o objetivo de proteção contra a disassociação e abordar principalmente os princípios de
 necessidade e minimização de dados.
 
-1.**MINIMISE **: Quantidade de dados processados deve ser restringido à quantidade mínima possível.
+1.**MINIMISE**: Quantidade de dados processados deve ser restringido à quantidade mínima possível.
 
 2.**HIDE**: Declara que quaisquer dados pessoais e as suas inter-relações devem ser escondidos com recurso ao uso de
 criptografia de dados,através da mistura de redes para ocultar padrões de tráfego ou ainda através de técnicas para disassociar
@@ -24,6 +24,7 @@ Quando os dados são gerais, as informações são válidas para muitos indivíd
 a uma única pessoa, protegendo assim sua privacidade.
 
 * *Orientadas aos processos*:
+
 5.**INFORM**
 
 6.**CONTROL**
