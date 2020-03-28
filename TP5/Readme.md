@@ -6,32 +6,30 @@ Neste exercício pretende analisar-se o documento `Privacy and Data Protection b
 que se encontram resumidas de seguida.
 As estratégias de design para a privacidade podem ser divididas em 2 vertentes:
 
-* *Orientadas aos dados*: Pode apoiar o objetivo de proteção contra a disassociação e abordar principalmente os princípios de
-necessidade e minimização de dados.
+* *Orientadas aos dados*:
 
-1.**MINIMISE**: Quantidade de dados processados deve ser restringido à quantidade mínima possível.
+1.**MINIMISE**: Quantidade de dados processados deve ser restringido à mínima possível.Com esta estratégia pretende-se
+assegura que os dados pessoais processados são realmente necessários e se não existe uma alternativa menos invasiva de se alcançar os mesmos objetivos. Os padrões de design desta estratégia são ‘select before you collect’,‘anonymisation and use pseudonyms’.
 
-2.**HIDE**: Declara que quaisquer dados pessoais e as suas inter-relações devem ser escondidos com recurso ao uso de
-criptografia de dados,através da mistura de redes para ocultar padrões de tráfego ou ainda através de técnicas para disassociar
-certos eventos(como credenciais baseadas em atributos).Garante confidencialidade.
+2.**HIDE**: Declara que quaisquer dados pessoais e as suas relações devem ser escondidos. Esta estratégia não especifica quais os dados que devem ser escondidos, isso depende do contexto que a mesma está a ser aplicada.Garante confidencialidade.Para além dos padrões de design ditos em cima,‘anonymisation and use pseudonyms’,existem outros para esta estratégia que são o uso de criptografia, mistura de redes para ocultar padrões de tráfego.
 
 3.**SEPARATE**:Afirma que os dados pessoais devem ser processados de forma distribuída,sendo necessário haver separação.A
 mesma é um bom método para alcançar o objetivo da limitação. Esta estratégia exige processamento distribuído em vez de
-soluções centralizadas.Por exemplo, redes como Diáspora oferecem mais privacidade que Facebook ou Google.
+soluções centralizadas.Por exemplo, redes como Diáspora oferecem mais privacidade que Facebook ou Google.Não especifica padrões de design.
 
 4.**AGGREGATE**: Afirma que os dados pessoais devem ser processados o mais agregados possível e com o menor detalhe.
 Quando os dados são gerais, as informações são válidas para muitos indivíduos e,portanto, pouca informação pode ser atribuída
-a uma única pessoa, protegendo assim sua privacidade.
+a uma única pessoa, protegendo assim sua privacidade. Os padrões de design desta estratégia são 'aggregation over time', 'dynamic location granularity','k-anonymity','differential privacy' entre outras técnicas de anonimato.
 
 * *Orientadas aos processos*:
 
-5.**INFORM**
+5.**INFORM**: Corresponde à importante noção de transparência.Os titulares dos dados devem ser informados sempre que os dados pessoais forem processado,com que propósito e quais os meios.Também devem ser informados sobre terceiros com os quais informações são compartilhadas, bem como seus direitos de acesso a dados.Os padrões de design desta estratégia são 'Platform for Privacy Preferences' e notificações 'Data breach'.
 
-6.**CONTROL**
+6.**CONTROL**: 
 
-7.**ENFORCE**
+7.**ENFORCE**:
 
-8.**DEMONSTRATE**
+8.**DEMONSTRATE**: Requere que um controlador de dados seja capaz de demonstrar conformidade com a política de privacidade.Está um passo à frente da estratégia anterior visto que o controlador tem que provar que está no comando na medida em que este tem que mostrar que as políticas de privacidade estão efetivamente implementadas dentro do sistema.Em caso de problemas, ele deverá ser capaz de determinar a extensão de possíveis violações da privacidade. Os padrões de design desta estratégia são 'privacy management systems',e o uso de 'logging' e 'auditing'. 
 
 
 ## Pergunta 1.2
