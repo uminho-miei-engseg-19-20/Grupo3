@@ -125,4 +125,21 @@ conseguirmos obter a avaliação do risco.
 No documento é então feito este cruzamento e com a tabela apresentada podemos concluir que a avaliação do risco é classificada 
 como Medium.
 
+### Medidas de Segurança
+Conforme e dependendo dos níveis de risco que o caso de uso tem a si associdado, as medidas de segurança podem ser variadas.
+
+Existem tanto medidas técnicas bem como medidas organizacionais estando estas ainda divididas em categorias e estas ainda têm 
+uma divisão associada ao nível de risco a que será dada resposta.
+
+Neste sentido, após feita a análise dos anexos do documento e alguma dificuldades na mesma, podemos apresentar as seguintes 
+medidas como proposta:
+
+* Data processors - Quem processa as avaliações pessoais e se encontra nos recursos humanos deverão ser submetidos a 
+agreements para non-disclosure.
+
+* Data Deletion/Disposal - É possível controlar e impedir que sejam removidas as avaliações sem a devida autorização.
+    
+* Physical Security - Identificação clara, por meios apropriados, por exemplo, crachás de identificação para todos os 
+funcionários e visitantes que acessam as instalações da organização impedindo o acesso a documentos por pessoal não 
+autorizado.
 
