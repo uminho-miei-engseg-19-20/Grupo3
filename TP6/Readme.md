@@ -25,4 +25,21 @@ Apesar de sabermos que alguns destes bugs correspondem a vulnerabilidades, não 
 
 ## Pegunta 1.3
 
+### Vulnerabilidade de projeto
+
+Introduzidas durante a fase de projeto do software (obtenção de requisitos e desenho).
+Exemplos destas vulnerabilidades :
+
+* **CWE-188: Reliance on Data/Memory Layout**
+
+Durante a fase de planeamento, é possível que se baseie o desenho do software com base em suposições inválidas sobre como os dados ou a memória do protocolo são organizados. Quando se pretende desenvolver software multi-plataforma, nas quais o modelo de organização de memória pode ser diferente, é propício a acontecer. 
+
+A correção passa por explicitar as suposições sobre o modelo de memória e verificar a compatibilidade das suposições com as plataformas consideradas alvo.
+
+* **CWE-266: Incorrect Privilege Assignment**
+
+Com esta vulnerabilidade, cria-se uma esfera de controlo não pretendida para um dado utilizador pois são-lhe atribuídas permissões incorretamente. Desta forma, este utilizador poderá ter acesso a informação sensível bem como a funcionalidades restritas.
+
+Na fase de planeamento, a correção passa por um processo rigoroso no que toca à atribuição de permissões, tendo de ser explítico de que forma é feita a gestão das zonas de confiança no software.
+
 ## Pegunta 1.4
