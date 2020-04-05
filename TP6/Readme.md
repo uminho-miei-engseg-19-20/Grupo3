@@ -59,4 +59,21 @@ Neste caso, é realizada uma cópia de um buffer sem ser feita a verificação d
 
 De forma a ser feita a correção desta vulnerabilidade, é necessário realizar a verificação do tamanho de um buffer e se este é suficiente para armazenar os dados pretendidos para que quando seja feita uma operação que armazene dados num buffer, a situação explicada anteriormente não aconteça.
 
+### Vulnerabilidade de operacional
+
+Causada pelo ambiente no qual o software executado ou pela sua configuração.
+Exemplos destas vulnerabilidades:
+
+* **CWE-5: J2EE Misconfiguration: Data Transmission without Encryption**
+
+Um atacante pode conseguir ler ou modificar o conteúdo dos dados caso estes sejam enviados como plaintext. Assim, poderá existir o comprometimento da informação enviada.
+
+A correção passa por ser realizada a configuração da aplicação e esta deverá assegurar que o SSL está em utilização no momento em que se pretende transmitir dados.
+
+* **CWE-555: J2EE Misconfiguration: Plaintext Password in Configuration File**
+
+A aplicação J2EE guarda a password num ficheiro de configuração. 
+
+A correção passa por serem utilizadas bibliotecas standard na cifragem de passwords antes destas serem guardadas em ficheiros de configuração.
+
 ## Pegunta 1.4
