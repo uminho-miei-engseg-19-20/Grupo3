@@ -42,4 +42,21 @@ Com esta vulnerabilidade, cria-se uma esfera de controlo não pretendida para um
 
 Na fase de planeamento, a correção passa por um processo rigoroso no que toca à atribuição de permissões, tendo de ser explítico de que forma é feita a gestão das zonas de confiança no software.
 
+### Vulnerabilidade de codificação 
+
+Introduzida durante a programaçao do software, i.e, um bug com implicações de segurança.
+Exemplos destas vulnerabilidades:
+
+* **CWE-20: Improper Input Validation**
+
+O facto do software não validar ou validar incorretamente os inputs recebidos, pode fazer com que existam alterações no fluxo de dados do programa ou no fluxo de controlo.
+
+De forma a corrigir podemos usar uma função que verifica, no exemplo de carateres especiais, se o input contêm ou não carateres sensíveis e isto é realizado tendo por base um "blacklist" de carateres. Em alternativa ou em conjunto, poderá ser tipo em conta os inputs aceitáveis através da utilização de uma "whitelist" confirma a especificação.
+
+* **CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')**
+
+Neste caso, é realizada uma cópia de um buffer sem ser feita a verificação do tamanho, ou seja, copiando de um input buffer para um output buffer, não é verificado se o tamanho do primeiro é igual ou inferior ao do segundo.
+
+De forma a ser feita a correção desta vulnerabilidade, é necessário realizar a verificação do tamanho de um buffer e se este é suficiente para armazenar os dados pretendidos para que quando seja feita uma operação que armazene dados num buffer, a situação explicada anteriormente não aconteça.
+
 ## Pegunta 1.4
