@@ -45,6 +45,37 @@ Após a compilação do programa, foi necessário testar várias vezes de modo a
 </p>
 
 ## Pegunta 1.5
+Tendo em conta a a aula teórica, para mitigar as vulnerabilidades de Buffer overflow na heap são utilizadas algumas ténicas de programção defensiva, nomeadamente:
+
+* Controlar o número de argumentos introduzidos.
+* Alocar memória - a memória que passa a ser alocada é memória que vai ser utilizada para o que o utilizador introduzir, sabendo quanto é que este necessita.
+* Evite funções de risco: Utilização de uma função que protege o programa ao invés de uma tradicional (strcpy passou a strncpy).
+    
+Em baixo é possível observar o código alterado:
+
+```
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(int argc, char **argv) {
+    int size = strlen(argv[1]);
+
+    if ( argc != 2 ){
+    	printf("Inconsistência!\n");
+	return 0;
+    }	
+    char *dummy = (char *) malloc (sizeof(char) * (size+1));
+    char *readonly = (char *) malloc (sizeof(char) * 10);
+
+    strncpy(readonly, "laranjas", 8);
+    strncpy(dummy, argv[1], size);
+    dummy[size] = '\0';
+
+    printf("%s\n", readonly);
+    printf("%s\n", dummy);
+}
+```
 
 ## Pegunta 1.6
 
