@@ -21,7 +21,7 @@ resultado é demonstrado de seguida:
     <img src="root.PNG">
 </p>
 
-* No ficheiro **0-simple.c** existe a vulnerabilidade de buffer overflow pelos mesmos motivos do exemplo RootExploit.c.Contudo, neste caso, o tamanho do input precisa de ser superior mais do que uma unidade do tamanho do buffer.Tal facto poderá dever-se ao alinhamento de memória forçado pelo compilador. Como podemos observar na imagem abaixo, apenas com um tamanho superior a 77 é que conseguimos aceder
+* No ficheiro **0-simple.c** existe a vulnerabilidade de buffer overflow pelos mesmos motivos do exemplo RootExploit.c.Contudo, neste caso, o tamanho do input precisa de ser superior mais do que uma unidade do tamanho do buffer.Tal facto poderá dever-se ao alinhamento de memória forçado pelo compilador. Como podemos observar na imagem abaixo, apenas com um input de tamanho superior a 77 é que conseguimos aceder
 à parte do programa que imprime "YOU WIN!!!!\n" :
 <p align="center">
     <img src="simple.PNG">
@@ -44,8 +44,58 @@ Após a compilação do programa, foi necessário testar várias vezes de modo a
     <img src="1_4.PNG">
 </p>
 
-
 ## Pegunta 1.5
 
 ## Pegunta 1.6
+
+Ao executar o programa é obtido um segmentation fault devido a várias razões que passamos a citar:
+
+* Não verifica o tamanho das strings na função `strcpy`.
+* Não verifica se o ficheiro que está a abrir existe.
+* O mesmo valor é usado muitas vezes no programa.
+
+Para colmatar os problemas foram feitas as seguintes mudanças :
+
+* Foi utilizada a função strncpy, que protege o programa contra os buffer overflow e, não é realizada a cópia caso o tamanho da string destino seja menor do que a original.
+
+* O valor de retorno da função open é verificado. Caso seja NULL, não executa as intruções necessárias.
+
+* O valor é guardado numa variável auxiliar e utilizado quando necessário.
+
+Em baixo é possível observar o código alterado:
+
+```
+/* stack.c */
+/* This program has a buffer overflow vulnerability. */
+/* Our task is to exploit this vulnerability */
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+int bof(char *str)
+{       
+        int tam;	
+	char buffer[tam];
+	/* The following statement has a buffer overflow problem */
+        if(strlen(str)<strlen(buffer)){
+		strncpy(buffer, str,tam);
+	}
+	return 1;
+}
+
+int main(int argc, char **argv)
+{       
+	int tam = 517;
+	char str[tam];
+	FILE *badfile;
+	if((badfile = fopen("badfile", "r"))!=NULL){
+		fread(str, sizeof(char), 517, badfile);
+		bof(str);
+	}
+	printf("Returned Properly\n");
+	
+	return 1;
+}
+```
+
+
 
