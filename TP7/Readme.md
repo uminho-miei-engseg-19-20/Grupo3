@@ -56,10 +56,8 @@ Ao executar o programa é obtido um segmentation fault devido a várias razões 
 
 Para colmatar os problemas foram feitas as seguintes mudanças :
 
-* Foi utilizada a função strncpy, que protege o programa contra os buffer overflow e, não é realizada a cópia caso o tamanho da string destino seja menor do que a original.
-
+* Foi utilizada a função `strncpy`, que protege o programa contra os buffer overflow e, não é realizada a cópia caso o tamanho da string destino seja menor do que a original.
 * O valor de retorno da função open é verificado. Caso seja NULL, não executa as intruções necessárias.
-
 * O valor é guardado numa variável auxiliar e utilizado quando necessário.
 
 Em baixo é possível observar o código alterado:
