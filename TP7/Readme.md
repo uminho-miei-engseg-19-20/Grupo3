@@ -15,9 +15,17 @@ Importante referir que em alguns casos é possível escrever além do limite do 
 
 * No ficheiro **RootExploit.c** existe a vulnerabilidade de buffer overflow devido ao facto de a função `gets` não fazer a validação
 do tamanho do input. Deste modo, consegue-se escrever na variável `pass` um input com tamanho superior a 4.Assim, para se conseguir as
-permissões de root basta que a variável anterior tenha um valor diferente de 0, inserindo-se uma string com 5 ou mais caracteres.
+permissões de root basta que a variável anterior tenha um valor diferente de 0, inserindo-se uma string com 5 ou mais caracteres. O
+resultado é demonstrado de seguida:
+<p align="center">
+    <img src="root.PNG">
+</p>
 
-* No ficheiro **0-simple.c** existe a vulnerabilidade de buffer overflow pelos mesmos motivos do exemplo RootExploit.c.Contudo, neste caso, o tamanho do input precisa de ser superior mais do que uma unidade do tamanho do buffer.Tal facto poderá dever-se ao alinhamento de memória forçado pelo compilador.
+* No ficheiro **0-simple.c** existe a vulnerabilidade de buffer overflow pelos mesmos motivos do exemplo RootExploit.c.Contudo, neste caso, o tamanho do input precisa de ser superior mais do que uma unidade do tamanho do buffer.Tal facto poderá dever-se ao alinhamento de memória forçado pelo compilador. Como podemos observar na imagem abaixo, apenas com um tamanho superior a 77 é que conseguimos aceder
+à parte do programa que imprime "YOU WIN!!!!\n" :
+<p align="center">
+    <img src="simple.PNG">
+</p>
 
 ## Pegunta 1.3 - Read overflow
 
