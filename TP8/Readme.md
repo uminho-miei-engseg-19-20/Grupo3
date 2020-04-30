@@ -45,7 +45,7 @@ verifica-se um **underflow** uma vez que o tipo de dados `size_t` não tem repre
 De modo a demonstrar a vulnerabilidade acima apresentada, foi alterada a main bastando passar o argumento `tamanho` com o valor 0:
 
 <p align="center">
-    <img src="1_2.PNG">
+    <img src="P1_2.PNG">
 </p>
 
 ###3
