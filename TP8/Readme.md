@@ -53,3 +53,16 @@ De modo a demonstrar a vulnerabilidade acima apresentada, foi alterada a main ba
 Quando executamos o código ocorre um **Segmentation Fault** dado que não é possível a alocação de memória pretendida, devolvendo NULL como resultado. O comando `memcpy` tenta escrever na variável destino que tem valor NULL, desencadeando sempre o erro de Segmentation fault.
 
 ### 4
+
+ As técnicas de programação defensiva utilizadas para mitigar as vulnerabilidades no programa foram a verificação do input e de possíveis underflows. Em baixo pode observar-se o código final após as alterações realizadas(tamanho > 1):
+ 
+ <p align="center">
+    <img src="P1_2_4.PNG">
+</p>
+
+Ao executar o programa underflow.c, o output é o seguinte:
+
+ <p align="center">
+    <img src="run.PNG">
+</p>
+
