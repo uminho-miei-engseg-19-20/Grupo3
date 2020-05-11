@@ -2,10 +2,10 @@ import datetime
 
 def verificaValor():
     inp = input('Introduza valor a pagar [Duas casas decimais tendo um ponto a marcar o seu início]:')
-    valor = float(inp)
     try:
-        div = valor.find('.')
-        if div == (len(valor)-3) :
+        valor = float(inp)
+        div = inp.find('.')
+        if div == (len(inp)-3) :
             return True
         else:
             return False
@@ -66,7 +66,7 @@ def verificaNIF():
     inp = input('Introduza NIF: ')
     nif = int(inp)
     try:
-        if(len(nif) == 9):
+        if(len(inp) == 9):
             return True
         else:
             return False
@@ -103,7 +103,7 @@ def verificaCCredito():
     try:
         credito = int(inp)
 
-        if len(credito) == 16 :
+        if len(inp) == 16 :
             return True
         else:
             return False
@@ -146,7 +146,7 @@ def verificaCVV():
     inp = input('Introduza CVC/CVV do cartão anterior: ')
     cvv = int(inp)
     try:
-        if(len(cvv) != 3):
+        if(len(inp) != 3):
             return False
         else:
             return True
@@ -154,18 +154,19 @@ def verificaCVV():
         return False
 
 def main():
-    verificaValor()
-    verificaData()
-    verificaNome()
-    verificaNIF()
-    verificaNIC()
-    verificaCCredito()
-    verificaValidade()
-    verificaCVV()
+    val = verificaValor()
+    dat = verificaData()
+    nom = verificaNome()
+    nif = verificaNIF()
+    nic = verificaNIC()
+    cred = verificaCCredito()
+    val = verificaValidade()
+    cvv = verificaCVV()
 
-    if (verificaValor()== True and verificaData() == True and verificaNome() == True and verificaNIF() == True and verificaNIC() == True and verificaCCredito() == True and verificaValidade() == True and verificaCVV()== True ):
+    if (val== True and dat == True and nom == True and nif == True and nic == True and cred == True and val == True and cvv== True ):
         print("Input Validado!" )
     else:
         print("Erro no Input!" )
 
-main()
+if __name__ == "__main__":
+    main()
