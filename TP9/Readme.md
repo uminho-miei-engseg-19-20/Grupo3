@@ -32,3 +32,5 @@ Poderia ainda ser utilizado o autocomplete para se ter acesso aos nomes dos fich
 Caso o programa tivesse permissões `setuid root` passaria a ter permissões de root quando o programa fosse executado. O sistema ficaria totalmente comprometido pois permitia a um utilizador qualquer executar qualquer ação desde ver o conteúdo de ficheiros, apagá-los ou encriptá-los, alterar comandos do sistema(por exemplo, o ls), podendo assim aceder a informações confidenciais.
 
 ## Pegunta 1.2
+
+Solução implementada [*Programa*](https://github.com/uminho-miei-engseg-19-20/Grupo3/blob/master/TP9/ex2.py)
