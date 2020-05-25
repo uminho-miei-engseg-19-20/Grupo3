@@ -82,9 +82,62 @@ Resultado obtido : Apaga a tabela e todos os dados dentro da mesma.
 
 #### Pergunta 1.2-XSS
 
+Nesta questão analisamos o *Cross-site Scripting* que é um tipo de vulnerabilidade. É caracterizado pela inserção de scripts maliciosos nas páginas acedidas por utilizadores. 
+
+##### 2
+
+Neste passo, após ter sido escrito: javascript:alert(document.cookie) na barra de endereços verificamos que as cookies são iguais. Assim, compreendemos que é possível executar scripts relacionados com cookies e que a informação apresentada era a mesma.
+
+##### 7
+
+Obtivemos e percebemos que o campo vulnerável era o "Enter your credit card number". Desta forma, introduzimos: <script>alert("Hey")</script>, aparecendo uma mensagem do browser a dizer Hey.
+
+##### 10 
+
+Neste passo, pretendemos explorar rotas que foram "esquecidas" no código para efeitos teste. No ficheiro "GoatRouter.js", após introduzirmos start.mvc#test e encontramos a route de teste.
+
+##### 11
+
+Introduzimos o endereço:
+
+localhost:8080/WebGoat/start.mvc#test/<script>webgoat.customjs.phoneHome()<%2Fscript>
+ 
+Inspecionamos a consola da developer tools e obtivemos um valor
+Posto isto, copiamos e colamos na caixa de resposta o valor previamente obtido na consola.
+
+##### 12
+
+Neste passo, tivemos de responder a 5 questões de escolha múltipla. As respostas dadas foram:
+
+* 1 - Solução 4
+* 2 - Solução 3
+* 3 - Solução 1
+* 4 - Solução 2
+* 5 - Solução 4
+
+
 ###  Quebra na Autenticação
 
 #### Pergunta 1.3-Password Reset
+
+##### 2
+
+Tendo o Webwolf a correr e selecionando a opção "Forgot your password?, introduzimos o email e depois veridicamos a caixa de entrada, em que é-nos enviado um email com a nossa nova password. Esta foi enviada sem qualquer tipo de proteção - plaintext. Após retornar ao login do Webgoar, introduzimos o email anterior e a password recebida e obtemos: "Congratulations. You have successfully completed the assignment."
+
+##### 4
+
+Neste passo, observa-se a falta de segurança na recuperação da password. Esta é feita atrevés de questões básica, facilitando muito o processo de recuperação. Bastou testar diferentes cores para cada utilizador.
+Desta forma, obtivemos que a chave do admin - green, bem como do tom e do larry sendo purple e yellow, respetivamente.
+
+##### 5
+
+A maior parte das vezes, a utilização de pergutnas de segurança, não são boas opções de verificação de identidade do user pois, apesar de haver algumas perguntas difíceis, é sempre possível adivinhar as respostas, por exemplo através do perfil das pessoas nas redes sociais ou até mesmo conhecer a vítima.
+
+##### 6
+
+Neste passo, percebemos que é possível dar reset da password do Tom, conhecendo unicamente o seu email, recorrendo ao link que é enviado quando se requer a reposição de password. Foi feita uma instalçao que permite intercetar e modificar pedidos. Fazemos o request de reposição de password para o email conhecido do Tom e alteramos a porta do host para 9090 (WebWolf).
+
+Posto isto é possível observar o pedido realizado na página Incoming Requests do WebWolf. Desta forma,  copia-se o link para o URL e conseguimos aceder a uma página em que fazemos a escolha de uma nova password. Por fim, é possível fazer o login com o email do Tom e a password escolhida.
 
 ### Componentes vulneráveis
 
@@ -98,6 +151,6 @@ executado.
 
 ##### 12
 
-Para este passo apenas foi adicionado o comando `<java.lang.Integer>96</java.lang.Integer>`.
+Para este passo apenas foi adicionado o comando `<java.lang.Integer>1</java.lang.Integer>`.
 
 
