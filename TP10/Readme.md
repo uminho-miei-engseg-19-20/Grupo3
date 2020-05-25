@@ -24,7 +24,7 @@ Adicionar a coluna "phone" na tabela "employees".
 
 Para tal utilizou se a Query: `ALTER TABLE Employees ADD phone varchar(20)`
 
-Resultado obtido :
+Resultado obtido : ALTER TABLE employees ADD phone varchar(20).
 
 ##### 5
 
@@ -32,7 +32,7 @@ Dar permissões a um determinado grupo de utilizadores.
 
 Para tal utilizou se a Query: `GRANT ALTER TABLE TO 'UnauthorizedUser'`
 
-Resultado obtido :
+Resultado obtido :  GRANT ALTER TABLE TO UnauthorizedUser.
 
 ##### 9-String Sql Injection
 
