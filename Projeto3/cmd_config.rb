@@ -11,5 +11,5 @@ def get_appid()
 
 =end
 
-    return APPLICATION_ID
+    return $APPLICATION_ID
 end
