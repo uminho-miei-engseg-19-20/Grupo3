@@ -1,14 +1,7 @@
 require 'hashlib'            # hash SHA256
 require 'savon'
 
-# Função para ativar o debug, permitindo mostrar mensagens enviadas e recebidas do servidor SOAP
-def debug()
-    
-end
-#debug()
-
 # Função que devolve o URL do WSDL do SCMD (preprod ou prod)
-#FUNCIONA
 def get_wsdl(env)
 
     wsdl = { 0 => "https://preprod.cmd.autenticacao.gov.pt/Ama.Authentication.Frontend/CCMovelDigitalSignature.svc?wsdl", 1 => "https://cmd.autenticacao.gov.pt/Ama.Authentication.Frontend/CCMovelDigitalSignature.svc?wsdl"}
@@ -16,9 +9,6 @@ def get_wsdl(env)
     puts wsdl.fetch(env, 'No valid WSDL')
     return wsdl.fetch(env, 'No valid WSDL')
 end
-
-#env = 1
-#get_wsdl(env)
 
 # Função que devolve o cliente de ligação (preprod ou prod) ao servidor SOAP da CMD
 def getclient(env)
@@ -30,10 +20,6 @@ def getclient(env)
                         #log_level: :debug)
                         )
 end
-
-#env = 0
-#timeout = 10
-#getclient(env)
 
 # Devolve a hash acrescentada do prefixo do tipo de hash utilizada
 def hashPrefix(hashtype, hash)
@@ -47,10 +33,6 @@ def hashPrefix(hashtype, hash)
     return prefix.fetch(hashtype, 'Only SHA256 available') + hash
 end
 
-#hash = "ola".bytes
-#hashtype = "SHA256"
-#hashPrefix(hashtype, hash)
-
 # GetCertificate(applicationId: xsd:base64Binary, userId: xsd:string)
 #                                       -> GetCertificateResult: xsd:string
 def getcertificate(client, args)
@@ -60,8 +42,6 @@ def getcertificate(client, args)
         'userId' => args["user"]
     }
 
-    #puts client.operations
- 
     return client.call(:get_certificate, message: request_data)
 end
 

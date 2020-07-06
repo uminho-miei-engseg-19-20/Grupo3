@@ -1,4 +1,4 @@
-load 'cmd_config.rb'   # Nota: necessário renomear o ficheiro _cmd_config.py para cmd_config.py
+load 'cmd_config.rb'   
 load 'cmd_soap_msg.rb'
 
 $APPLICATION_ID = get_appid()
@@ -46,14 +46,15 @@ def isPIN(num)
     return 0
 end
 
-
+#Função main do programa.
 def main()
-    #"""Função main do programa."""
-   # if not $APPLICATION_ID
-    #    puts "Configure o APPLICATION_ID"
-     #   exit()
-    #args = args_parse()
-    #end
+    
+    if $APPLICATION_ID == nil or $APPLICATION_ID.length == 0
+       puts "Configure o APPLICATION_ID"
+       exit()
+    
+    end
+
     option = -1
     while (option != 0)
         puts("\n########################### Command Line Program ###########################\n");
@@ -83,7 +84,8 @@ def main()
             when 6
                 recebeArgs()
             when 0
-                puts "0"
+                puts "++++++ A fechar Programa ++++++"
+                exit()
             else
                 puts "Inválido. Tente novamente"
         end
@@ -105,9 +107,6 @@ def getCertificateM ()
             "user" => user
         }
 
-        puts "\n+++ Fim de GetCertificate +++\n"
-        puts user
-        puts getcertificate(cliente, args)
         return getcertificate(cliente, args)
     else 
         puts "Formato incorreto ! Insira o seu número de telemóvel com o formato +XXX NNNNNNNNN\n "
@@ -137,8 +136,6 @@ def ccMovelSignM()
             "userId" => user
         }
 
-        puts "\n+++ Fim de CCMovelSign +++\n"
-        puts ccmovelsign(cliente,args , 'SHA256')
         return ccmovelsign(cliente,args ,hashtype )
     else
         puts "Formato inválido!"
@@ -162,7 +159,6 @@ def ccMovelMultipleSignM()
             "userId" => user
         }
 
-        puts "\n+++ Fim de CCMovelMultipleSignM +++\n"
         return ccmovelmultiplesign(cliente, args)
     end
 end
@@ -185,7 +181,6 @@ def validateOtpM()
             "OTP" => otp
         }
 
-        puts "\n+++ Fim de Validate OTP +++\n"
         return validate_otp(cliente,args)
     end
 end
@@ -201,7 +196,8 @@ def recebeArgs()
     puts "Insira o seu pin CMD Signature:\n"
     pin = gets.chomp
 
-    return testAll(path, user, pin)
+    if(isUser(user) == 1 and isPIN(pin))
+        return testAll(path, user, pin)
 end
 
 def testAll(path, user, pin) 
