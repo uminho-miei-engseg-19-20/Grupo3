@@ -246,7 +246,7 @@ def testAll(path, user, pin)
     puts("110% ... A validar assinatura ...\n")
 
     puts("Assinatura verificada com sucesso, baseada na assinatura recebida, na hash gerada e " +
-          "na chave pública do certificado de ") # + certs_chain['user'].get_subject().CN)
+          "na chave pública do certificado de ")
 
     puts "\n+++ Test All finalizado +++\n"
 end
