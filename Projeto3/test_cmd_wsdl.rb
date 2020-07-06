@@ -198,6 +198,7 @@ def recebeArgs()
 
     if(isUser(user) == 1 and isPIN(pin))
         return testAll(path, user, pin)
+    end
 end
 
 def testAll(path, user, pin) 
