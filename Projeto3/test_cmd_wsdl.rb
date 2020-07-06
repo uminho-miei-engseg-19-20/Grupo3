@@ -171,10 +171,10 @@ def validateOtpM()
     cliente = getclient(1)
     puts "\n+++ Validate OTP +++\n"
 
-    puts "Insira o ProcessID recebido como resposta em CCMovel(Multiple)Sign command::\n"
+    puts "Insira o ProcessID recebido como resposta em CCMovel(Multiple)Sign command:\n"
     ppid = gets.chomp
 
-    puts "Insert Your OTP received in your device:\n"
+    puts "Insira o seu OTP recebido no seu dispositivo:\n"
     otp = gets.chomp
 
     if(isOTP(otp) == 1)
