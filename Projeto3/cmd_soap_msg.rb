@@ -6,7 +6,6 @@ def get_wsdl(env)
 
     wsdl = { 0 => "https://preprod.cmd.autenticacao.gov.pt/Ama.Authentication.Frontend/CCMovelDigitalSignature.svc?wsdl", 1 => "https://cmd.autenticacao.gov.pt/Ama.Authentication.Frontend/CCMovelDigitalSignature.svc?wsdl"}
 
-    puts wsdl.fetch(env, 'No valid WSDL')
     return wsdl.fetch(env, 'No valid WSDL')
 end
 
@@ -28,13 +27,10 @@ def hashPrefix(hashtype, hash)
         'SHA256'=> bytes = [0x30, 0x31, 0x30, 0x0d, 0x06, 0x09, 0x60, 0x86, 0x48, 0x01,
                                    0x65, 0x03, 0x04, 0x02, 0x01, 0x05, 0x00, 0x04, 0x20]
     }
-   
-    puts prefix.fetch(hashtype, 'Only SHA256 available') + hash
     return prefix.fetch(hashtype, 'Only SHA256 available') + hash
 end
 
-# GetCertificate(applicationId: xsd:base64Binary, userId: xsd:string)
-#                                       -> GetCertificateResult: xsd:string
+# GetCertificate(applicationId: xsd:base64Binary, userId: xsd:string)-> GetCertificateResult: xsd:string
 def getcertificate(client, args)
 
     request_data = {
